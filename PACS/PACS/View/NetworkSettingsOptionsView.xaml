@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="PACS.View.NetworkSettingsOptionsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PACS.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Background="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock 
+            FontSize="24"
+            FontWeight="Bold"
+            TextAlignment="Center"
+            Margin="0,20">
+            <Underline>
+                Network Port Settings
+            </Underline></TextBlock>
+
+        <StackPanel Grid.Row="1" MaxWidth="500">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10">
+                    <TextBlock Width="100" Text="IP Address"/>
+                    <TextBox Width="400"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,10">
+                    <TextBlock Width="100"
+                               Text="Subnet Mask" />
+                    <TextBox Width="400" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,10">
+                    <TextBlock Width="100"
+                               Text="Gateway" />
+                    <TextBox Width="400" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,10">
+                    <TextBlock Width="100"
+                               Text="DNS Type" />
+                    <TextBox Width="400" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,10">
+                    <TextBlock Width="100"
+                               Text="HTTP Port" />
+                    <TextBox Width="400" />
+                </StackPanel>
+
+            </StackPanel>
+
+            <Grid>
+                <UniformGrid Columns="3"
+                             Rows="1">
+                    <Border Margin="10"
+                            BorderBrush="Transparent"
+                            BorderThickness="0">
+                        <Button Content="Load Default" />
+                    </Border>
+                    <Border Margin="10"
+                            BorderBrush="Transparent"
+                            BorderThickness="0">
+                        <Button Content="Save As Default" />
+                    </Border>
+                    <Border Margin="10"
+                            BorderBrush="Transparent"
+                            BorderThickness="0">
+                        <Button Content="Submit" />
+                    </Border>
+                </UniformGrid>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>

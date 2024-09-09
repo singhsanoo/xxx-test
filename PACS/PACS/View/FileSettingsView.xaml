@@ -1,0 +1,165 @@
+﻿<UserControl x:Class="PACS.View.FileSettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PACS.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             Background="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            
+        </Grid.RowDefinitions>
+
+        <!--PATHS-->
+        <StackPanel>
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,0,0,20">
+                <TextBlock Text="C:\Users\My_folder\CA_Recording\Month_View\"
+                           TextTrimming="WordEllipsis"
+                           TextWrapping="NoWrap"
+                           ToolTip="{Binding Text, RelativeSource={RelativeSource Self}}"
+                           Width="300"
+                           HorizontalAlignment="Left" />
+                <Button Width="180">Open CA Recording Folder</Button>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,0,0,20">
+                <TextBlock Text="C:\Users\My_folder\CA_Recording\Month_View\"
+                           TextTrimming="WordEllipsis"
+                           TextWrapping="NoWrap"
+                           ToolTip="{Binding Text, RelativeSource={RelativeSource Self}}"
+                           Width="300"
+                           HorizontalAlignment="Left" />
+                <Button Width="180">Open FO Recording Folder</Button>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,0,0,20">
+                <TextBlock Text="C:\Users\My_folder\CA_Recording\Month_View\"
+                           TextTrimming="WordEllipsis"
+                           TextWrapping="NoWrap"
+                           ToolTip="{Binding Text, RelativeSource={RelativeSource Self}}"
+                           Width="300"
+                           HorizontalAlignment="Left" />
+                <Button Width="180">Choose Log Path</Button>
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,0,0,20">
+                <TextBox Text="C:\Users\My_folder\CA_Recording\Month_View\"                           
+                           Width="280"
+                            Margin="0,0,20,0"
+                           HorizontalAlignment="Left" />
+                <Button Width="180">File Name Preview</Button>
+            </StackPanel>
+        </StackPanel>
+
+        <!--TABLE-->
+        <Grid Grid.Row="1">
+            <Border BorderBrush="Blue" BorderThickness="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Background="Blue" Foreground="White" 
+                               TextAlignment="Center"
+                               Padding="0,5"
+                               >Disk Space Details</TextBlock>
+
+                    <Grid Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40" />
+                            <RowDefinition Height="40" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Headers -->
+                        <TextBlock Text="Name"
+                                   FontWeight="Bold"
+                                   Grid.Row="0"
+                                   Grid.Column="0"
+                                   Padding="5" />
+                        <TextBlock Text="Type"
+                                   FontWeight="Bold"
+                                   Grid.Row="0"
+                                   Grid.Column="1"
+                                   Padding="5" />
+                        <TextBlock Text="Total Size"
+                                   FontWeight="Bold"
+                                   Grid.Row="0"
+                                   Grid.Column="2"
+                                   Padding="5" />
+                        <TextBlock Text="Free Space"
+                                   FontWeight="Bold"
+                                   Grid.Row="0"
+                                   Grid.Column="3"
+                                   Padding="5" />
+                        <TextBlock Text="Time Remaining"
+                                   FontWeight="Bold"
+                                   Grid.Row="0"
+                                   Grid.Column="4"
+                                   Padding="5" />
+
+                        <!-- Data Rows -->
+                        <TextBlock Text="C:Drive"
+                                   Grid.Row="1"
+                                   Grid.Column="0"
+                                   Padding="5" />
+                        <TextBlock Text="Local Disk"
+                                   Grid.Row="1"
+                                   Grid.Column="1"
+                                   Padding="5" />
+                        <TextBlock Text="400 GB"
+                                   Grid.Row="1"
+                                   Grid.Column="2"
+                                   Padding="5" />
+                        <TextBlock Text="285 GB"
+                                   Grid.Row="1"
+                                   Grid.Column="3"
+                                   Padding="5" />
+                        <TextBlock Text="05h:33m:20s"
+                                   Grid.Row="1"
+                                   Grid.Column="4"
+                                   Padding="5" />
+
+                        <TextBlock Text="E:Drive"
+                                   Grid.Row="2"
+                                   Grid.Column="0"
+                                   Padding="5" />
+                        <TextBlock Text="Local Disk"
+                                   Grid.Row="2"
+                                   Grid.Column="1"
+                                   Padding="5" />
+                        <TextBlock Text="400 GB"
+                                   Grid.Row="2"
+                                   Grid.Column="2"
+                                   Padding="5" />
+                        <TextBlock Text="285 GB"
+                                   Grid.Row="2"
+                                   Grid.Column="3"
+                                   Padding="5" />
+                        <TextBlock Text="05h:33m:20s"
+                                   Grid.Row="2"
+                                   Grid.Column="4"
+                                   Padding="5" />
+                    </Grid>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>
